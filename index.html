@@ -2,9 +2,130 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Sampler</title>
+	<title>Sampler Piano</title>
+
+	<!-- CSS LINK -->
+	<link rel="stylesheet" href="css/style.css">
+
+
 </head>
 <body>
-	
+
+	<div class="piano">
+		<div class="piano-keys-wrapper">
+			<div id="g" class="white key">
+				<p>G</p>
+			</div>
+			<div id="a" class="white key">
+				<p>A</p>
+			</div>
+			
+			<div id="b" class="white key">
+				<p>B</p>
+			</div>
+			<div id="c" class="white key">
+				<p>C</p>
+			</div>
+			
+			<div id="d" class="white key">
+				<p>D</p>
+			</div>
+			
+			<div id="e" class="white key">
+				<p>E</p>
+			</div>
+			<div id="f" class="white key">
+				<p>F</p>
+			</div>
+			
+			<div id="g2" class="white key">
+				<p>G</p>
+			</div>
+			
+			<div class="black-keys">
+				<div id="A#" class="black key">
+					<p>A# B&#9837;</p>
+				</div>
+				<div id="C#" class="black key">
+					<p>C# D&#9837;</p>
+				</div>
+				<div id="D#" class="black key">
+					<p>D# E&#9837;</p>
+				</div>
+				<div id="F#" class="black key">
+					<p>F# G&#9837;</p>
+				</div>
+				<div id="G#" class="black key">
+					<p>G# A&#9837;</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		init();
+
+        var createAudio = function(){
+            window.newAudioC1 = new Audio();
+            newAudioC1.src = 'sound/C.mp3';
+
+            window.newAudioC# = new Audio();
+            newAudioC#.src = 'sound/C#.mp3';
+
+            window.newAudioD = new Audio();
+            newAudioD.src = 'sound/D.mp3';
+
+            window.newAudioD# = new Audio();
+            newAudioD#.src = 'sound/D#.mp3';
+
+            window.newAudioE = new Audio();
+            newAudioE.src = 'sound/E.mp3';
+
+            window.newAudioF = new Audio();
+            newAudioF.src = 'sound/F.mp3';
+
+            window.newAudioF# = new Audio();
+            newAudioF#.src = 'sound/F#.mp3';
+
+            window.newAudioG = new Audio();
+            newAudioG.src = 'sound/G.mp3';
+
+            window.newAudioG = new Audio();
+            newAudioG.src = 'sound/G.mp3';
+        }();
+    
+    
+	    function init(){
+	        var playButton = document.getElementById('a');
+	        playButton.addEventListener('click', playAudioA, false);
+
+	        var playButton = document.getElementById('b');
+	        playButton.addEventListener('click', playAudioB, false);
+
+	        var playButton = document.getElementById('c1');
+	        playButton.addEventListener('click', playAudioC, false);
+	    }
+
+    
+	    function playAudioA() {
+	        newAudioA.play()
+	    }
+	    function playAudioB() {
+	        newAudioB.play()
+	    }
+	    function playAudioC() {
+	        newAudioC.play()
+	    }
+
+
+	    function myFunction() {
+	    var aString = "This is a string";
+
+	    var res = aString.toUpperCase();
+	    document.getElementById("demo").innerHTML = res;
+	}
+
+	    console.log(window.resizeBy);
+	</script>
 </body>
 </html>

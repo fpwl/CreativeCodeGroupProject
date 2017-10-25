@@ -1,0 +1,57 @@
+*{
+	font-family: 'helvetica', sans-serif;
+}
+
+.piano{
+	/*background-color: blue;*/
+	width: 100%;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.piano-keys-wrapper{
+	height: 500px;
+	width: 90%;
+	display: flex;
+	flex-direction:row;
+	position: absolute;
+}
+
+.piano-keys-wrapper .white{
+	background-color: #FFF;
+	width: 30%;
+	height: 100%;
+	position: relative;
+	border-radius: 0 0 15px 15px;
+	border: solid 1px #000;
+	display: flex;
+	align-items: flex-end;
+	justify-content:center;
+}
+
+.piano-keys-wrapper .black{
+	background-color: #000;
+	width: 20%;
+	height: 65%;
+	border-radius: 0 0 5px 5px;
+	position: relative;
+	align-self:flex-start;
+	display: flex;
+	align-items: flex-end;
+	justify-content:center;
+}
+
+.piano-keys-wrapper .white p{
+	color: black;
+	text-align: center;
+	font-size: 1.2em;
+
+}
+
+.piano-keys-wrapper .black p{
+	color: white;
+	text-align: center;
+	font-size: 1.2em;
+}
