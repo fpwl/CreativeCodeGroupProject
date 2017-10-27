@@ -74,25 +74,25 @@ playNotes();
 	        playButton.addEventListener('click', playAudioE, false);
 
 	        var playButton = document.getElementById('f');
-	        playButton.addEventListener('click', playAudioE, false);
+	        playButton.addEventListener('click', playAudioF, false);
 
 	        var playButton = document.getElementById('F#');
-	        playButton.addEventListener('click', playAudioE, false);
+	        playButton.addEventListener('click', playAudioFs, false);
 
 	        var playButton = document.getElementById('g');
-	        playButton.addEventListener('click', playAudioD, false);
+	        playButton.addEventListener('click', playAudioG, false);
 
 	        var playButton = document.getElementById('G#');
-	        playButton.addEventListener('click', playAudioDs, false);
+	        playButton.addEventListener('click', playAudioGs, false);
 
 	        var playButton = document.getElementById('a2');
-	        playButton.addEventListener('click', playAudioE, false);
+	        playButton.addEventListener('click', playAudioA2, false);
 
 	        var playButton = document.getElementById('A#2');
-	        playButton.addEventListener('click', playAudioE, false);
+	        playButton.addEventListener('click', playAudioA2s, false);
 
 	        var playButton = document.getElementById('b2');
-	        playButton.addEventListener('click', playAudioE, false);
+	        playButton.addEventListener('click', playAudioB2, false);
 	    }
 
 	    
@@ -135,8 +135,8 @@ playNotes();
 	    function playAudioA2() {
 	        noteA2.play()
 	    }
-	    function playAudioAs2() {
-	        noteAs2.play()
+	    function playAudioA2s() {
+	        noteA2s.play()
 	    }
 	    function playAudioB2() {
 	        noteB2.play()
