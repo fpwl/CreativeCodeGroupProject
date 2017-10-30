@@ -1,5 +1,5 @@
 playNotes();
-
+		//creating the audio (i.e adding audio)
         var createAudio = function(){
             window.noteA = new Audio();
             noteA.src = 'sounds_edited/A.mp3';
@@ -47,55 +47,55 @@ playNotes();
             noteB2.src = 'sounds_edited/B2.mp3';
         }();
     
-    
+    	//functions that target what happens when something is clicked
 	    function playNotes(){
-	        var playButton = document.getElementById('a');
-	        playButton.addEventListener('click', playAudioA, false);
+	        var playButtonA= document.getElementById('a');
+	        playButtonA.addEventListener('click', playAudioA, false);
 
-	        var playButton = document.getElementById('A#');
-	        playButton.addEventListener('click', playAudioAs, false);
+	        var playButtonAs = document.getElementById('A#');
+	        playButtonAs.addEventListener('click', playAudioAs, false);
 
-	        var playButton = document.getElementById('b');
-	        playButton.addEventListener('click', playAudioB, false);
+	        var playButtonB = document.getElementById('b');
+	        playButtonB.addEventListener('click', playAudioB, false);
 
-	        var playButton = document.getElementById('c');
-	        playButton.addEventListener('click', playAudioC, false);
+	        var playButtonC = document.getElementById('c');
+	        playButtonC.addEventListener('click', playAudioC, false);
 
-	        var playButton = document.getElementById('C#');
-	        playButton.addEventListener('click', playAudioCs, false);
+	        var playButtonCs = document.getElementById('C#');
+	        playButtonCs.addEventListener('click', playAudioCs, false);
 
-	        var playButton = document.getElementById('d');
-	        playButton.addEventListener('click', playAudioD, false);
+	        var playButtonD = document.getElementById('d');
+	        playButtonD.addEventListener('click', playAudioD, false);
 
-	        var playButton = document.getElementById('D#');
-	        playButton.addEventListener('click', playAudioDs, false);
+	        var playButtonDs = document.getElementById('D#');
+	        playButtonDs.addEventListener('click', playAudioDs, false);
 
-	        var playButton = document.getElementById('e');
-	        playButton.addEventListener('click', playAudioE, false);
+	        var playButtonE = document.getElementById('e');
+	        playButtonE.addEventListener('click', playAudioE, false);
 
-	        var playButton = document.getElementById('f');
-	        playButton.addEventListener('click', playAudioF, false);
+	        var playButtonE = document.getElementById('f');
+	        playButtonF.addEventListener('click', playAudioF, false);
 
-	        var playButton = document.getElementById('F#');
-	        playButton.addEventListener('click', playAudioFs, false);
+	        var playButtonFs = document.getElementById('F#');
+	        playButtonFs.addEventListener('click', playAudioFs, false);
 
-	        var playButton = document.getElementById('g');
-	        playButton.addEventListener('click', playAudioG, false);
+	        var playButtonG = document.getElementById('g');
+	        playButtonG.addEventListener('click', playAudioG, false);
 
-	        var playButton = document.getElementById('G#');
-	        playButton.addEventListener('click', playAudioGs, false);
+	        var playButtonGs = document.getElementById('G#');
+	        playButtonGs.addEventListener('click', playAudioGs, false);
 
-	        var playButton = document.getElementById('a2');
-	        playButton.addEventListener('click', playAudioA2, false);
+	        var playButtonA2 = document.getElementById('a2');
+	        playButtonA2.addEventListener('click', playAudioA2, false);
 
-	        var playButton = document.getElementById('A#2');
-	        playButton.addEventListener('click', playAudioA2s, false);
+	        var playButtonA2s = document.getElementById('A#2');
+	        playButtonA2s.addEventListener('click', playAudioA2s, false);
 
-	        var playButton = document.getElementById('b2');
-	        playButton.addEventListener('click', playAudioB2, false);
+	        var playButtonB2 = document.getElementById('b2');
+	        playButtonB2.addEventListener('click', playAudioB2, false);
 	    }
 
-	    
+	    //More functions play the corresponding audio when the previous function has been innvoked
 	    function playAudioA() {
 	        noteA.play()
 	    }
@@ -142,13 +142,65 @@ playNotes();
 	        noteB2.play()
 	    }
 
+	    //A switch statement to make the keyboard key correspond to the notes. 
+	    document.addEventListener("keypress", function(e) {
+    		var key = e.keyCode;
 
+    		console.log(key);
 
-	    function myFunction() {
-	    var aString = "This is a string";
+		    switch (key) {
+		        // A key
+		        case 97:
+		            noteA.currentTime = 0;
+		            playAudioA();
+		            break;
+		        case 119:
+		            noteAs.currentTime = 0;
+		            playAudioAs();
+		            break;
+		        case 115:
+		            noteB.currentTime = 0;
+		            playAudioB();
+		            break;
+		        case 100:
+		            noteC.currentTime = 0;
+		            playAudioC();
+		            break;
+		        case 114:
+		            noteCs.currentTime = 0;
+		            playAudioCs();
+		            break;
+		        case 102:
+		            noteD.currentTime = 0;
+		            playAudioD();
+		            break;
+		        case 116:
+		            noteDs.currentTime = 0;
+		            playAudioDs();
+		            break;
+		        case 103:
+		            noteE.currentTime = 0;
+		            playAudioE();
+		            break;
+		        case 104:
+		            noteF.currentTime = 0;
+		            playAudioF();
+		            break;
+		        case 117:
+		            noteFs.currentTime = 0;
+		            playAudioFs();
+		            break;
+		        case 106:
+		            noteG.currentTime = 0;
+		            playAudioG();
+		            break;
+		        case 105:
+		            noteGs.currentTime = 0;
+		            playAudioGs();
+		            break;
 
-	    var res = aString.toUpperCase();
-	    document.getElementById("demo").innerHTML = res;
-	}
-
-	    console.log(window.resizeBy);
+		        default:
+		        	console.log('bye');
+		        	break;
+			}
+		});
